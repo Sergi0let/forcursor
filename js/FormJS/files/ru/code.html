@@ -1,0 +1,61 @@
+<div id='codeModal' class='modal fade' tabindex='-1' role='dialog' data-backdrop='static'>
+    <div class='modal-dialog' role='document'>
+        <div class='modal-content'>
+            <div class='modal-body'> 
+                <a type='button' class='close' data-dismiss='modal' aria-label='Close'>
+                    <span aria-hidden='true'>
+                        &times;
+                    </span>
+                    </a>
+                <div class='alert' role='alert'>
+                    <form class='form-container custom-form'>
+                        <h3>Подтвердите свой номер телефона</h3>
+                        <div>
+                            <div class='error'>
+                                <span class="error__text"></span>
+                                <span id='attemps'>У вас осталось попыток: <span>3</span></span>
+                            </div>
+                            <input data-validation-type='codeVerification' name='codeVerification' placeholder='Код' required>
+                        </div>
+                        <div class='form-container__actions'>
+                            <button id='regContinue' class='send-form' disabled='disabled' type='button'>Продолжить</button>
+                            <span class="hint">Не получили СМС?</span>
+                            <button id='resendCode' style='margin-top:10px' disabled='disabled' type='button'>
+                                Отправить код повторно
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    #codeModal{
+        z-index: 99999;
+    }
+    #codeModal .close{
+        position: relative;
+        z-index: 9;
+    }
+    #regContinue {
+        width: 100%;
+    }
+    #attemps {
+        font-size: 12px;
+    }
+    #resendCode {
+        font-size: 12px;
+        text-decoration: underline;
+        border: 0;
+        background-color: inherit;
+        color: inherit;
+    }
+    .custom-form .error {
+        position: relative;
+        transform: none;
+    }
+    .hint {
+        font-size: 12px;
+    }
+</style>
